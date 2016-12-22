@@ -4,7 +4,7 @@ function representativesAdapter(){
 
   const address = $("#address").val().split(" ").join("+")
   new Citizen(address)
-  const repsURL = repRootURL + address + "&key=" + process.env.APIKey
+  const repsURL = repRootURL + address + "&key=" + APIKey
   event.preventDefault()
 
   return $.ajax({
