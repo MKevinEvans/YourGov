@@ -1,4 +1,4 @@
-const store = {representatives: [], citizens:[], messages: [], issues: {}}
+const store = {representatives: [], citizens:[], messages: []}
 
 const Representative = function(){
   let id = 0
@@ -12,7 +12,6 @@ const Representative = function(){
       this.email = email || ["No email listed"]
       this.phone = phone || ["No phone numbers listed"]
       this.photo = photo || "public/images/default.jpg"
-      this.issues = {}
       store.representatives.push(this)
     }
   }

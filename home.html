@@ -2,29 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SPEAKUP</title>
+    <title>MyGov</title>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="handlebars.js"></script>
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
     <script src="config.js"></script>
-    <script src="app/serviceObjects/formSetupHelper.js" charset="utf-8"></script>
     <script src="app/models/message.js" charset="utf-8"></script>
     <script src="app/models/representative.js"></script>
+    <script src="app/models/search.js"></script>
     <script src="app/models/citizen.js" charset="utf-8"></script>
+    <script src="app/controllers/AppController.js"></script>
     <script src="app/controllers/RepresentativesController.js"></script>
     <script src="app/controllers/MessagesController.js"></script>
     <script src="app/adapters/representativeAdapter.js"></script>
-    <script src="index.js"></script>
+    <script src="app/adapters/searchAdapter.js"></script>
   </head>
   <body>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="topSpaceS">SpeakUp</h1>
+          <h1 class="topSpaceS">MyGov</h1>
           <h3>Find your representatives and let them know where you stand</h3>
         </div>
       </div>
@@ -38,7 +38,7 @@
             </div>
             <br>
             <br>
-            <input class="btn btn-primary btn-lg col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1" type="submit" value="Search" onclick="representativesAdapter()">
+            <input class="btn btn-primary btn-lg col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1" type="submit" value="Search" onclick="run()">
           </form>
         </div>
       </div>

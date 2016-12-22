@@ -35,33 +35,22 @@ function renderPage(repList) {
       </div>
 
       <div id ="${rep.id}" class="col-lg-2 leftSpaceL text-right">
-        <form class='contact' action="#" data-id="${rep.id}">
+        <form class='email' action="#" data-id="${rep.id}"data-sendClient="email">
 
-          <div class="form-group">
-            <select name="issues">
-              <option value="0">Select Issue</option>
-            </select>
-          </div>
+          <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-bullhorn", aria-hidden="true"></span> Email ${rep.name}!</button>
+        </form>
 
-          <div class="form-group">
-            <select name="stance">
-              <option value="0">Select Stance</option>
-              <option value="pro">Pro</option>
-              <option value="against">Against</option>
-            </select>
-          </div>
+        <form class='tweet' action="#" data-id="${rep.id}" data-sendClient="tweet">
 
-          <div class="form-group">
-            <select name="method" class="btn btn-default dropdown-toggle">
-              <option value="0">Select Tweet or Email</option>
-              <option value="tweet">Tweet Them!</option>
-              <option value="email">Email Them!</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-bullhorn", aria-hidden="true"></span> Contact Now</button>
+          <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-bullhorn", aria-hidden="true"></span> Tweet ${rep.name}!</button>
 
         </form>
+
+        <form class='searchArticles' action="#" data-name="${rep.name}">
+
+          <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-book", aria-hidden="true"></span>See News about ${rep.name}</button>
+
+        </form>        
       </div>
     </div>`
   }).join(" "))
