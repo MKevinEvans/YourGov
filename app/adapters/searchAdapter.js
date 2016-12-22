@@ -4,7 +4,7 @@ function searchAdapter(repName){
 	debugger
   const formattedRepName = repName.split(" ").join("%20")
   new Search(repName)
-  const searchURL = searchRootURL + formattedRepName + "&cx=" + ENV['SearchEngineId'] + "&num=5&key=" + ENV['SearchAPIKey']
+  const searchURL = searchRootURL + formattedRepName + "&cx=" + process.env.SearchEngineId + "&num=5&key=" + process.env.SearchAPIKey
   event.preventDefault()
 
   return $.ajax({
