@@ -22,12 +22,12 @@ function createRepresentative(office, official){
     official.phones, official.photoUrl)
 
   if (official.channels) {
-     var twitter = official.channels.filter(channel => channel.type === "Twitter")
-     if (twitter.length > 0) {
-       rep.twitter = "@" + twitter[0].id
-     } else {
-       rep.twitter = "No Twitter listed"
-     }
+    var twitter = official.channels.filter(channel => channel.type === "Twitter")
+    if (twitter.length > 0) {
+      rep.twitter = "@" + twitter[0].id
+    } else {
+     rep.twitter = "No Twitter listed"
+    }
   } else {
     rep.twitter = "No Twitter listed"
   }

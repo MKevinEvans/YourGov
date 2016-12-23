@@ -2,7 +2,7 @@ const repRootURL = "https://www.googleapis.com/civicinfo/v2/representatives?addr
 
 function representativesAdapter(){
 
-  const address = $("#address").val().split(" ").join("+")
+  const address = $("#address").val()
   new Citizen(address)
   const repsURL = repRootURL + address + "&key=" + APIKey
   event.preventDefault()
@@ -15,16 +15,10 @@ function representativesAdapter(){
 
 function parseRepresentatives(response) {
   const repList = []
-
   response.offices.map(office => {
-    const index = office.officialIndices
-    if (index.length > 1) {
-      index.map(i => {
-        repList.push(createRepresentative(office, response.officials[i]))
-      })
-    } else {
+    office.officialIndices.map(index => {
       repList.push(createRepresentative(office, response.officials[index]))
-    }
+    })
   })
   renderPage(repList)
 }
