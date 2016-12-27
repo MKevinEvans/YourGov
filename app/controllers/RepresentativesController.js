@@ -8,7 +8,7 @@ function renderPage(repList) {
       var twitterLink = `<p><a href="https://twitter.com/${rep.twitter}" target="_blank" class="twitter">${rep.twitter}</a></p>`
     }
 
-    return `<div class="row rowFormat darkBox">
+    return `<div id=${rep.id} class="row rowFormat darkBox">
       <div class="col-lg-2 col-md-6 col-sm-6">
         <img src=${rep.photo} class="img-responsive img-circle">
       </div>
@@ -46,7 +46,7 @@ function renderPage(repList) {
 
         </form>
 
-        <form class='searchArticles' action="#" data-name="${rep.name}">
+        <form class='searchArticles' action="#" data-id="${rep.id}" data-name="${rep.name}">
 
           <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-book", aria-hidden="true"></span>See News about ${rep.name}</button>
 

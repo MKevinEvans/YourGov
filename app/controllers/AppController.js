@@ -13,9 +13,11 @@ function run(){
     })
       $('.searchArticles').on('submit', function(){
       event.preventDefault()
-      searchAdapter(this.dataset.name)
+      var id = this.dataset.id
+      $(`#${id}`).append(Promise.resolve(searchAdapter(this.dataset.name)))
+      })
     })
-  })
+  // })
   .fail(function() {
     alert("Please enter a valid U.S. address.")
   })
