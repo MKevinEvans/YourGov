@@ -17,7 +17,6 @@ function run(){
       $(`#${id}`).append(Promise.resolve(searchAdapter(this.dataset.name)))
       })
     })
-  // })
   .fail(function() {
     alert("Please enter a valid U.S. address.")
   })
