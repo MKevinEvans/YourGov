@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Shrikhand");
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 8em; }
+
+.leftSpaceM {
+  padding-left: 0.83em; }
+
+.leftSpaceL {
+  padding-left: 2em; }
+
+.rightSpaceM {
+  padding-right: 0.83em; }
+
+.topSpaceL {
+  padding-top: 1.3em; }
+
+.topSpaceM {
+  padding-top: 0.83em; }
+
+.topSpaceS {
+  padding-top: 0.3em; }
+
+.bottomSpaceM {
+  padding-bottom: 0.83em; }
+
+/*# sourceMappingURL=master.css.map */
