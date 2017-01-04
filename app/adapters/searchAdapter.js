@@ -22,7 +22,7 @@ function showLinks(infoObjects){
     `<div>
       <ul>
         ${infoObjects.map((object) =>{
-          return ( `<li><a href="${object.link}">${object.title}</a></li>`)}
+          return ( `<li><a href="${object.link}" class="article">${object.title}</a></li>`)}
         ).join("")}
       </ul>
     </div>`
