@@ -14,7 +14,9 @@ function run(){
       $('.searchArticles').on('submit', function(){
       event.preventDefault()
       var id = this.dataset.id
-      $(`#${id}`).append(Promise.resolve(searchAdapter(this.dataset.name)))
+      var returnedPromise = Promise.resolve(searchAdapter(this.dataset.name))
+      debugger
+      $(`#${id}`).append(returnedPromise)
       })
     })
   .fail(function() {
