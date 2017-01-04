@@ -62,3 +62,7 @@ label {
 .darkerBox {
   background-color:black;
 }
+
+.article {
+  color: rgba(163, 226, 255, 1);
+}
