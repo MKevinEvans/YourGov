@@ -13,8 +13,9 @@ function run(){
     })
       $('.searchArticles').on('submit', function(){
       event.preventDefault()
-      var id = this.dataset.id
-      $(`#${id}`).append(Promise.resolve(searchAdapter(this.dataset.name)))
+      Promise.resolve(searchAdapter(this.dataset.name)).then(function(result) {
+        $(`#${this.dataset.id}`).append(parseSearchResults(result))
+      })
       })
     })
   .fail(function() {

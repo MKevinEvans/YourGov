@@ -20,5 +20,13 @@ function parseRepresentatives(response) {
       repList.push(createRepresentative(office, response.officials[index]))
     })
   })
-  renderPage(repList)
+  renderPage(fixOrder(repList))
+}
+
+function fixOrder(repList) {
+  if (repList[0].title != "President of the United States") {
+    repList.splice(3, 0, repList[0])
+    repList.shift()
+  }
+    return repList
 }

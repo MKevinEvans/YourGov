@@ -8,32 +8,23 @@ function searchAdapter(repName){
     return $.ajax({
     method: "GET",
     url: searchURL
-  }).done(parseSearchResults)
+  })
 }
-
-
 
 function parseSearchResults(results){
   // NOTE: infoObjects is an array of objects with keys for 'title' and 'link'
   let infoObjects = results.items.map(function(result){return Object.assign({}, {title: result.title, link: result.link})})
-  return showLinks(infoObjects, results.queries.request[0].searchTerms)
+  return showLinks(infoObjects)
 }
 
-
-
-function showLinks(infoObjects, repName){
-
-  let display = (
+function showLinks(infoObjects){
+  return (
     `<div>
-      <h2>${repName} Articles</h2>
       <ul>
         ${infoObjects.map((object) =>{
-          return ( `<li><a href="${object.link}">${object.title}</a></li>`)}
+          return ( `<li><a href="${object.link}" class="article">${object.title}</a></li>`)}
         ).join("")}
       </ul>
     </div>`
   )
-
-  $('#phone-disclaimer').empty()
-  $('#results').empty().append(display)
 }
