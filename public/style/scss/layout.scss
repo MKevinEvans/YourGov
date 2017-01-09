@@ -1,0 +1,24 @@
+/*!
+  LAYOUT
+*/
+
+.rowFormat {
+  padding: 1.3em;
+  border-radius: 25px;
+  margin-right:2em;
+  margin-left: 2em;
+  margin-top: .3em;
+}
+
+.doubleTop {
+  border-top: thick double $dark;
+}
+
+.darkBox {
+  background-color: $mid;
+  color:white;
+}
+
+.darkerBox {
+  background-color: $dark;
+}

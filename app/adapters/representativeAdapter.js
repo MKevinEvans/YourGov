@@ -6,6 +6,7 @@ function representativesAdapter(){
   new Citizen(address)
   const repsURL = repRootURL + address + "&key=" + APIKey
   event.preventDefault()
+  debugger
 
   return $.ajax({
     method: "GET",
@@ -20,6 +21,7 @@ function parseRepresentatives(response) {
       repList.push(createRepresentative(office, response.officials[index]))
     })
   })
+  debugger
   renderPage(fixOrder(repList))
 }
 
