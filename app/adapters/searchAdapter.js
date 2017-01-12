@@ -19,10 +19,10 @@ function parseSearchResults(results){
 
 function showLinks(infoObjects){
   return (
-    `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <ul>
+    `<div class="col-lg-6 col-lg-offset-6  col-md-12 col-sm-12 col-xs-12 lightBox">
+      <ul class="topSpaceS">
         ${infoObjects.map((object) =>{
-          return ( `<li><a href="${object.link}" class="article">${object.title}</a></li>`)}
+          return ( `<li><a href="${object.link}" class="article" target="_blank">${object.title}</a></li>`)}
         ).join("")}
       </ul>
     </div>`

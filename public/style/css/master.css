@@ -52,6 +52,10 @@ label {
 .doubleTop {
   border-top: thick double black; }
 
+.lightBox {
+  background-color: white;
+  border-radius: 25px; }
+
 .darkBox {
   background-color: rgba(69, 67, 86, 0.75);
   color: white; }

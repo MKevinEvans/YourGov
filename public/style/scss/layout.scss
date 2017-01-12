@@ -14,6 +14,11 @@
   border-top: thick double $dark;
 }
 
+.lightBox {
+  background-color: $light;
+  border-radius: 25px;
+}
+
 .darkBox {
   background-color: $mid;
   color:white;
