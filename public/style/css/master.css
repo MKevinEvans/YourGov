@@ -1,0 +1,72 @@
+/*!
+  FONT IMPORTS AND SIZING
+*/
+@import url("https://fonts.googleapis.com/css?family=Shrikhand");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|Roboto");
+.leftSpaceM {
+  padding-left: 0.83em; }
+
+.leftSpaceL {
+  padding-left: 2em; }
+
+.rightSpaceM {
+  padding-right: 0.83em; }
+
+.topSpaceL {
+  padding-top: 1.3em; }
+
+.topSpaceM {
+  padding-top: 0.83em; }
+
+.topSpaceS {
+  padding-top: 0.3em; }
+
+.bottomSpaceM {
+  padding-bottom: 0.83em; }
+
+/*!
+  TYPOGRAPHY
+*/
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 8em;
+  font-weight: bold; }
+
+label {
+  font-size: 1.3em; }
+
+.twitter {
+  font-weight: bold;
+  color: #a3e2ff; }
+
+/*!
+  LAYOUT
+*/
+.rowFormat {
+  padding: 1.3em;
+  border-radius: 25px;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-top: .3em; }
+
+.doubleTop {
+  border-top: thick double black; }
+
+.lightBox {
+  background-color: white;
+  border-radius: 25px; }
+
+.darkBox {
+  background-color: rgba(69, 67, 86, 0.75);
+  color: white; }
+
+.darkerBox {
+  background-color: black; }
+
+/*!
+  Bootstrap monkeyWrench
+*/
+.form-group {
+  color: black; }
+
+/*# sourceMappingURL=master.css.map */

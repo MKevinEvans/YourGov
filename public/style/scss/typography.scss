@@ -1,0 +1,25 @@
+/*!
+  TYPOGRAPHY
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif|Roboto');
+
+
+$title: 'Roboto', sans-serif;
+$script-title: "Shrikhand", sans-serif;
+
+h1 {
+  font-family: $title;
+  font-size: 8em;
+  font-weight: bold;
+}
+
+label {
+  font-size: $sizeL - .7;
+}
+
+.twitter {
+  font-weight:bold;
+  color: rgba(163, 226, 255, 1);
+}

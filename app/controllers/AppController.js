@@ -13,10 +13,14 @@ function run(){
     })
       $('.searchArticles').on('submit', function(){
       event.preventDefault()
-      searchAdapter(this.dataset.name)
+      let id = this.dataset.id
+      Promise.resolve(searchAdapter(this.dataset.name)).then(function(result) {
+        $(`#${id}`).append(parseSearchResults(result))
+      })
+      })
     })
-  })
   .fail(function() {
     alert("Please enter a valid U.S. address.")
   })
 }
+

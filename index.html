@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MyGov</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="public/style/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/style/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <script src="heroku-config.js" charset="utf-8"></script>
+    <script src="app/models/message.js" charset="utf-8"></script>
+    <script src="app/models/representative.js"></script>
+    <script src="app/models/search.js"></script>
+    <script src="app/models/citizen.js" charset="utf-8"></script>
+    <script src="app/controllers/AppController.js"></script>
+    <script src="app/controllers/RepresentativesController.js"></script>
+    <script src="app/controllers/MessagesController.js"></script>
+    <script src="app/adapters/representativeAdapter.js"></script>
+    <script src="app/adapters/searchAdapter.js"></script>
+  </head>
+  <body>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+          <h1 class="topSpaceS">MY GOV</h1>
+            <h3>Find your representatives</h3>
+            <h4>Let them know where you stand</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center topSpaceS" id="search">
+          <form class="form-inline" action="#results">
+            <div class="form-group bottomSpaceS col-sm-12">
+
+              <label class="sr-only" for="address">Address: </label>
+              <input type="text" name="search" id="address">
+
+              <h5 class="help-block topSpaceS">Zip codes may have split districts, it's best to use your full address</h5>
+            </div>
+
+            <input class="btn btn-primary btn-lg col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3" type="submit" value="Search" onclick="run()">
+
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="phone-disclaimer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        </div >
+      </div>
+
+      <div id="results" class="topSpaceM">
+      </div>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+$sizeS: .3em;
+$sizeM: .83em;
+$sizeL: 2em;
+
+.leftSpaceM {
+  padding-left: $sizeM;
+}
+
+.leftSpaceL {
+  padding-left: $sizeL;
+}
+.rightSpaceM {
+  padding-right: $sizeM
+}
+.topSpaceL {
+  padding-top: $sizeL - .7;
+}
+
+.topSpaceM {
+  padding-top: $sizeM;
+}
+
+.topSpaceS {
+  padding-top: $sizeS;
+}
+
+.bottomSpaceM {
+  padding-bottom: $sizeM;
+}
