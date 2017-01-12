@@ -3,6 +3,7 @@ function run(){
   .done(function(){
     $('#results').hide().slideDown(2500)
   }).done(function(){
+      $()
       $('.tweet').on('submit', function(){
       event.preventDefault()
       tweet(this)
