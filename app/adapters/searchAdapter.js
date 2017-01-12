@@ -19,7 +19,7 @@ function parseSearchResults(results){
 
 function showLinks(infoObjects){
   return (
-    `<div>
+    `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <ul>
         ${infoObjects.map((object) =>{
           return ( `<li><a href="${object.link}" class="article">${object.title}</a></li>`)}

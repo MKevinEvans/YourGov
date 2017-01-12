@@ -28,7 +28,7 @@ function renderPage(repList) {
       </div>
 
 
-      <div id ="${rep.id}" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-right">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-right">
         <form class='email' action="#" data-id="${rep.id}"data-sendClient="email">
 
           <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-bullhorn", aria-hidden="true"></span> Email ${rep.name}!</button>

@@ -13,8 +13,9 @@ function run(){
     })
       $('.searchArticles').on('submit', function(){
       event.preventDefault()
+      let id = this.dataset.id
       Promise.resolve(searchAdapter(this.dataset.name)).then(function(result) {
-        $(`#${this.dataset.id}`).append(parseSearchResults(result))
+        $(`#${id}`).append(parseSearchResults(result))
       })
       })
     })
@@ -22,3 +23,4 @@ function run(){
     alert("Please enter a valid U.S. address.")
   })
 }
+
