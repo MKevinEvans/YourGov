@@ -3,16 +3,13 @@ function run(){
   .done(function(){
     $('#results').hide().slideDown(2500)
   }).done(function(){
-      $('.tweet').on('submit', function(){
-      event.preventDefault()
+      $('.tweet').on('click', function(){
       tweet(this)
     })
-      $('.email').on('submit', function(){
-      event.preventDefault()
+      $('.email').on('click', function(){
       email(this)
     })
-      $('.searchArticles').on('submit', function(){
-      event.preventDefault()
+      $('.searchArticles').on('click', function(){
       let id = this.dataset.id
       Promise.resolve(searchAdapter(this.dataset.name)).then(function(result) {
         $(`#${id}`).append(parseSearchResults(result))
